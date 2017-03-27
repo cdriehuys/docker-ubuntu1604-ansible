@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Jeff Geerling
+MAINTAINER Chathan Driehuys
 
 # Install dependencies.
 RUN apt-get update \
@@ -7,6 +7,7 @@ RUN apt-get update \
        python-software-properties \
        software-properties-common \
        rsyslog systemd systemd-cron sudo \
+       openssh-server \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
