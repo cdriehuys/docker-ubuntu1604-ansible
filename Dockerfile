@@ -8,6 +8,7 @@ RUN apt-get update \
        software-properties-common \
        rsyslog systemd systemd-cron sudo \
        openssh-server \
+       curl \
     && rm -Rf /var/lib/apt/lists/* \
     && rm -Rf /usr/share/doc && rm -Rf /usr/share/man \
     && apt-get clean
